@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const mealDetailsContainer = document.getElementById("meal-details");
+  mealDetailsContainer.innerHTML = "... Lodading";
   const urlParams = new URLSearchParams(window.location.search);
   const mealId = urlParams.get("id");
   if (mealId) {
@@ -8,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
       );
       const data = await res.json();
-      console.log("meal", data);
       const meal = data?.meals[0];
       if (meal) {
         const instructionsFormatted = meal.strInstructions.replace(
@@ -86,6 +86,5 @@ function toggleFavBtn(meal) {
   } else {
     favs.splice(mealIndex, 1);
   }
-  console.log("favs", favs);
   localStorage.setItem("favorites", JSON.stringify(favs));
 }

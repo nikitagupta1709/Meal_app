@@ -11,25 +11,28 @@
     />
   </head>
   <body>
+    <div class="background-image"></div>
     <nav>
-      <a href="./index.html"><button>Home</button></a>
+      <a href="#"><h1>G.T. Meals</h1></a>
       <a href="./favorite.html"><button>Favorites</button></a>
     </nav>
-    <header>
-      <h1>G.T. Meals</h1>
-    </header>
-    <main>
-      <p class="quote">
-        Find the perfect meal in seconds and save your favorites for later.
-        Browse, search, and build your personalized collection of go-to dishes
-        all in one place.
-      </p>
-      <input
-        id="search"
-        class="search-bar"
-        placeholder="Type to search for meals..."
-      />
-      <ul id="autocomplete-list" class="autocomplete-items"></ul>
+    <main class="main-section">
+      <div class="content">
+        <p>
+          Explore a world of <span>flavors</span> by searching for your
+          <span>favorite</span> meals. <br />
+          Add them to your personalized <span>collection</span> and enjoy them
+          anytime!
+        </p>
+        <div>
+          <input
+            id="search"
+            class="search-bar"
+            placeholder="Type to search for meals..."
+          />
+          <ul id="autocomplete-list" class="autocomplete-items"></ul>
+        </div>
+      </div>
     </main>
     <script type="module" src="./components/index.js"></script>
   </body>

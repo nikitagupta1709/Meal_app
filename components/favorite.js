@@ -7,20 +7,26 @@ document.addEventListener("DOMContentLoaded", async () => {
       favoriteItem.className = "favorite-item";
 
       favoriteItem.innerHTML = `
-      <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-      <h3 class="meal-name" data-id="${meal.idMeal}">${meal.strMeal}</h3>
-      <p>${meal.strCategory}</p>
-      <p>${meal.strArea}</p>
-      <button class="remove-favorite" data-id="${meal.idMeal}"><i class="fas fa-heart-broken"></i></button>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+        <h3 class="meal-name" data-id="${meal.idMeal}">
+        ${
+          meal.strMeal.length > 12
+            ? `${meal.strMeal.substring(0, 12)}...`
+            : meal.strMeal
+        }
+        </h3>
+        <p>${meal.strCategory}</p>
+        <p>${meal.strArea}</p>
+        <button class="remove-favorite" data-id="${
+          meal.idMeal
+        }"><i class="fas fa-heart-broken"></i></button>
   `;
 
       favContainer.appendChild(favoriteItem);
     });
     favContainer.addEventListener("click", (event) => {
       const mealNameElement = event.target.closest(".meal-name");
-      console.log("mealNameElement", mealNameElement);
       const removeButton = event.target.closest(".remove-favorite");
-      console.log("removeButton", removeButton);
       if (mealNameElement) {
         const mealId = mealNameElement.dataset.id;
         if (mealId) {
@@ -28,7 +34,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       }
 
-      // Handle remove favorite button click
       if (removeButton) {
         const mealId = removeButton.dataset.id;
         if (mealId) {
@@ -38,7 +43,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
   } else {
-    favContainer.innerHTML = "<p>No favorite meals found.</p>";
+    favContainer.innerHTML = `
+      <p class="no-data">No meals found!! Please search and add meals. </p>
+    `;
   }
 });
 

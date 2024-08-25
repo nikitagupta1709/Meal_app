@@ -1,16 +1,86 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #aaa4a4;
+  background-color: #f7f0f0;
   /* background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
   /* color: #fff; */
   text-align: center;
 }
-header > h1 {
-  margin-top: -30px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  height: 50px;
+  background-color: #fff;
+  width: 100%;
+  margin-top: -6px;
+}
+nav {
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  /* font-weight: bold; */
+}
+a > button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+a > button:hover {
+  background-color: #9c9393;
+  cursor: pointer;
+}
+.main-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/meal-prep-index-1566932947.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.7;
+}
+.content {
+  width: 100%;
+  padding: 20px;
+}
+.content > p {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  width: 80%;
+}
+.content > p > span {
+  color: red;
 }
 .quote {
   width: 60%;
   margin: auto;
+}
+.search-bar {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
 }
 .searchcontainer {
   display: flex;
@@ -18,12 +88,6 @@ header > h1 {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-}
-.search-bar {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  width: 50%;
 }
 .autocomplete-items {
   list-style-type: none;
@@ -35,7 +99,8 @@ header > h1 {
   overflow-y: auto;
   background-color: #fff;
   width: 51.5%;
-  z-index: 1;
+  /* z-index: 1; */
+  top: 60px;
   scrollbar-width: thin;
   scrollbar-color: #333 #f3f3f3;
 }
@@ -70,11 +135,13 @@ header > h1 {
   color: black;
   background-color: #ddd;
 }
-
+#meal-details {
+  padding: 50px;
+}
 #meal-details h2 {
   font-size: 1.8em;
   /* color: #fff;  */
-  margin-top: 0;
+  margin-top: -10px;
 }
 
 #meal-details img {
@@ -120,7 +187,7 @@ header > h1 {
 .favorite-button {
   background: none;
   border: none;
-  color: #fff;
+  color: red;
   font-size: 1.5em;
   cursor: pointer;
   display: block;
@@ -133,30 +200,13 @@ header > h1 {
 .favorite-button i {
   transition: color 0.3s;
 }
-nav {
-  text-align: right;
-}
-a {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-a > button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-a > button:hover {
-  background-color: #9c9393;
-  cursor: pointer;
-}
 #favorites-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: auto;
+  align-items: center;
 }
 
 .favorite-item {
@@ -164,14 +214,19 @@ a > button:hover {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 200px;
+  width: 155px;
   margin: 1rem;
   text-align: left;
   padding: 0.5rem;
   position: relative;
   color: black;
+  flex-wrap: row wrap;
 }
-
+.favorite-item:hover {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  background-color: #ff5858;
+  /* width: 220px; */
+}
 .favorite-item img {
   width: 100%;
   height: auto;
@@ -180,6 +235,7 @@ a > button:hover {
 .favorite-item h3 {
   margin: 0.5rem;
   font-size: 1.2rem;
+  text-wrap: nowrap;
 }
 
 .favorite-item p {
@@ -208,17 +264,26 @@ a > button:hover {
 .favorite-item .remove-favorite:hover {
   background: #f09819;
 }
-.add-favorite {
-  background-color: #fff;
+.favorite-btn {
+  background: none;
   border: none;
-  padding: 0;
-  margin: 0;
-  height: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
-.add-favorite:hover {
-  color: red;
-  background-color: #ddd;
+
+.favorite-btn .fas {
+  color: #bbb; /* Default color */
 }
-.remove-favorite {
+
+.favorite-btn.favorited .fas {
+  color: #ff5858; /* Red color when favorited */
+}
+.favorited:hover {
   color: red;
+}
+.no-data {
+  width: 80%;
+  margin: auto;
+  font-size: 30px;
+  margin-top: 60px;
 }
