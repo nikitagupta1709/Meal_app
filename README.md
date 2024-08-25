@@ -89,14 +89,6 @@ This project is a dynamic web application designed to help users explore and dis
 - **Meal Ratings**: Allow users to rate meals and see community ratings.
 - **Recipe Sharing**: Enable users to share their favorite recipes on social media.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue if you have suggestions or improvements.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
 ## Acknowledgements
 
 - [TheMealDB](https://www.themealdb.com/) for providing the meal data API.
