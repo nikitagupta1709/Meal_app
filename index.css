@@ -1,0 +1,224 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #aaa4a4;
+  /* background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
+  /* color: #fff; */
+  text-align: center;
+}
+header > h1 {
+  margin-top: -30px;
+}
+.quote {
+  width: 60%;
+  margin: auto;
+}
+.searchcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.search-bar {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+}
+.autocomplete-items {
+  list-style-type: none;
+  padding: 0;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  width: 51.5%;
+  z-index: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #f3f3f3;
+}
+
+.autocomplete-items::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+.autocomplete-items::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.autocomplete-items::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #d62929;
+}
+
+.autocomplete-items::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.autocomplete-items li {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  text-align: left;
+}
+
+.autocomplete-items li:hover {
+  color: black;
+  background-color: #ddd;
+}
+
+#meal-details h2 {
+  font-size: 1.8em;
+  /* color: #fff;  */
+  margin-top: 0;
+}
+
+#meal-details img {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+#meal-details p {
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#meal-details h3 {
+  font-size: 1.2em;
+  /* color: #fff; */
+  margin-top: 30px;
+  text-align: left;
+}
+
+#meal-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#meal-details ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: left;
+}
+.meal-name:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.favContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.favorite-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: block;
+}
+
+.favorite-button.active {
+  color: red;
+}
+
+.favorite-button i {
+  transition: color 0.3s;
+}
+nav {
+  text-align: right;
+}
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+a > button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+a > button:hover {
+  background-color: #9c9393;
+  cursor: pointer;
+}
+#favorites-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.favorite-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+  margin: 1rem;
+  text-align: left;
+  padding: 0.5rem;
+  position: relative;
+  color: black;
+}
+
+.favorite-item img {
+  width: 100%;
+  height: auto;
+}
+
+.favorite-item h3 {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.favorite-item p {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.favorite-item .remove-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5858;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.favorite-item .remove-favorite:hover {
+  background: #f09819;
+}
+.add-favorite {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 15px;
+}
+.add-favorite:hover {
+  color: red;
+  background-color: #ddd;
+}
+.remove-favorite {
+  color: red;
+}
