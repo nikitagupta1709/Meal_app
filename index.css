@@ -1,15 +1,12 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f0f0;
-  /* background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%); */
-  /* color: #fff; */
   text-align: center;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid red; */
   border-radius: 5px;
   height: 50px;
   background-color: #fff;
@@ -23,7 +20,6 @@ a {
   text-decoration: none;
   color: black;
   padding: 5px;
-  /* font-weight: bold; */
 }
 a > button {
   padding: 10px;
@@ -99,7 +95,6 @@ a > button:hover {
   overflow-y: auto;
   background-color: #fff;
   width: 51.5%;
-  /* z-index: 1; */
   top: 60px;
   scrollbar-width: thin;
   scrollbar-color: #333 #f3f3f3;
@@ -140,7 +135,6 @@ a > button:hover {
 }
 #meal-details h2 {
   font-size: 1.8em;
-  /* color: #fff;  */
   margin-top: -10px;
 }
 
@@ -160,7 +154,6 @@ a > button:hover {
 
 #meal-details h3 {
   font-size: 1.2em;
-  /* color: #fff; */
   margin-top: 30px;
   text-align: left;
 }
@@ -225,7 +218,6 @@ a > button:hover {
 .favorite-item:hover {
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   background-color: #ff5858;
-  /* width: 220px; */
 }
 .favorite-item img {
   width: 100%;
@@ -272,11 +264,11 @@ a > button:hover {
 }
 
 .favorite-btn .fas {
-  color: #bbb; /* Default color */
+  color: #bbb;
 }
 
 .favorite-btn.favorited .fas {
-  color: #ff5858; /* Red color when favorited */
+  color: #ff5858;
 }
 .favorited:hover {
   color: red;

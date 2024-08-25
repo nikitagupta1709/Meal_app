@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
     <title>Meal Details</title>
+
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="./index.css" />
+
+    <!-- Link to Font Awesome for using icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
+    <!-- Navigation bar -->
     <nav>
+      <!-- Link to the homepage -->
       <a href="./index.html"><h1>G.T. Meals</h1></a>
-      <a href="./favorite.html"><button>Favorites</button></a>
+      <!-- Button to view favorite meals page -->
+      <a href="./favorite.html"><button>My favourite meals</button></a>
     </nav>
+
+    <!-- Container for displaying meal details -->
     <div id="meal-details"></div>
+
+    <!-- JavaScript module for handling meal details functionality -->
     <script type="module" src="./components/details.js"></script>
   </body>
 </html>

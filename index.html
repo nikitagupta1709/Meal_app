@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
     <title>Meal App</title>
+
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="./index.css" />
+
+    <!-- Link to Font Awesome for using icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
+    <!-- Background image for the main section -->
     <div class="background-image"></div>
+
+    <!-- Navigation bar -->
     <nav>
+      <!-- Link to the homepage with the app title -->
       <a href="#"><h1>G.T. Meals</h1></a>
-      <a href="./favorite.html"><button>Favorites</button></a>
+      <!-- Button to navigate to the favorites page -->
+      <a href="./favorite.html"><button>My favourite meals</button></a>
     </nav>
+
+    <!-- Main content section -->
     <main class="main-section">
       <div class="content">
+        <!-- Introductory text with emphasis on key words -->
         <p>
           Explore a world of <span>flavors</span> by searching for your
           <span>favorite</span> meals. <br />
           Add them to your personalized <span>collection</span> and enjoy them
           anytime!
         </p>
+
+        <!-- Search bar and autocomplete list for meal search -->
         <div>
           <input
             id="search"
@@ -34,6 +51,8 @@
         </div>
       </div>
     </main>
+
+    <!-- JavaScript module for handling search and other functionalities -->
     <script type="module" src="./components/index.js"></script>
   </body>
 </html>
