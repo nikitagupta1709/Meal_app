@@ -36,8 +36,8 @@ function debounce(func, delay) {
   };
 }
 
-// Create a debounced version of the search function with a 500ms delay
-const debouncedSearch = debounce(searchedMeal, 500);
+// Create a debounced version of the search function with a 300ms delay
+const debouncedSearch = debounce(searchedMeal, 300);
 
 // Add an event listener to the search input to trigger the debounced search on each input
 search.addEventListener("input", (event) => {
