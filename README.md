@@ -1,8 +1,8 @@
-# G.T. Meals
+# Meals website
 
 ## Overview
 
-G.T. Meals is a web application that allows users to search for meals, view detailed information about each meal, and save their favorite meals. The app utilizes TheMealDB API to fetch meal data and provides a user-friendly interface for searching, viewing, and managing meal favorites.
+This project a web application that allows users to search for meals, view detailed information about each meal, and save their favorite meals. The app utilizes TheMealDB API to fetch meal data and provides a user-friendly interface for searching, viewing, and managing meal favorites.
 
 ## Features
 
